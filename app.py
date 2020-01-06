@@ -26,6 +26,10 @@ def get():
     cur = con.cursor()
     # query
     data = []
+
+    # testing purposes
+    # cur.execute("INSERT INTO shrooms (temperature, humidity, co2) VALUES (%s, %s, %s)", (79.2, 82.1, 891.7))
+
     cur.execute('SELECT temperature, humidity, co2 FROM shrooms')
     rows = cur.fetchall()
     for r in rows:
